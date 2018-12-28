@@ -27,7 +27,7 @@ element
 - There are 2 JavaScript functions.
     * The first is a pixel generator that randomly places stars at 3 levels moving at 3 different speeds to give the feeling of floating through space _(This is unlike any of the Star Wars crawlers, I did this for an added effect)_ . 
     
-    * The other uses a json-collection containing the first 8 Star Wars opening crawls. A random number is generated and then used to select which episode element to add inside the HTML when the page is loaded.
+    * The other uses a json-collection containing the first 8 Star Wars opening crawls. A random number is generated and then used to select which episode element to add inside the HTML body each time the page is loaded.
 
 
 ### SVG
