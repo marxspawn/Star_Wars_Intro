@@ -28,7 +28,7 @@ svg {
   width: 0.5px;
   height: 0.5px;
   background-color: white;
-  animation: animStar 50s linear infinite;
+  animation: animStar 150s linear infinite;
 }
 
 .star2 {
@@ -44,7 +44,7 @@ svg {
   width: 1.5px;
   height: 1.5px;
   background-color: white;
-  animation: animStar 150s linear infinite;
+  animation: animStar 50s linear infinite;
 }
 
 #intro {
