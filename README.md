@@ -41,5 +41,6 @@ element
 #### Audio
 _If the audio is not playing and you would like to hear it, you may have edit your browsers settings to allow the webpage to autoplay music_. 
 
+> [Click here to check out the results on github pages](https://marxspawn.github.io/Star_Wars_Intro/)
 
 
