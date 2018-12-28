@@ -1,0 +1,159 @@
+body {
+  overflow: hidden;
+  font-family: "STARWARS", "Russo One", sans-serif;
+  padding: 5%;
+  color: rgb(252, 223, 43);
+  background: #000000;
+}
+
+p {
+  font-family: "STARWARS", "Russo One", sans-serif;
+  color: rgb(252, 223, 43);
+}
+
+svg {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  width: auto;
+  margin: auto;
+  opacity: 0;
+  animation: logo 12s linear 9.5s;
+}
+
+.star {
+  position: absolute;
+  width: 0.5px;
+  height: 0.5px;
+  background-color: white;
+  animation: animStar 50s linear infinite;
+}
+
+.star2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  animation: animStar 100s linear infinite;
+}
+
+.star3 {
+  position: absolute;
+  width: 1.5px;
+  height: 1.5px;
+  background-color: white;
+  animation: animStar 150s linear infinite;
+}
+
+#intro {
+  position: absolute;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  left: 20%;
+  top: 30%;
+  opacity: 0;
+  animation: leadIn 7s linear 1s;
+}
+
+.intro {
+  font-family: "Karla", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  color: rgb(75, 213, 238);
+}
+
+#scene {
+  position: absolute;
+  text-align: justify;
+  height: 50em;
+  width: 18em;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9em;
+  overflow: hidden;
+  font-size: 400%;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+}
+
+#crawl {
+  font-family: "STARWARS", "Russo One", sans-serif;
+  line-height: 150%;
+  position: absolute;
+  top: 100%;
+  color: rgb(252, 223, 43);
+  animation: scroll 185s linear 15.75s;
+}
+
+#episode {
+  font-family: "STARWARS", "Russo One", sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(252, 223, 43);
+}
+
+#title {
+  font-family: "STARWARS", "Russo One", sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(252, 223, 43);
+}
+
+@keyframes leadIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.01);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -170%;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(-350px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
