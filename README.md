@@ -1,6 +1,8 @@
 
 # [Star Wars Opening Crawl](https://marxspawn.github.io/Star_Wars_Intro/)
 
+![Octocat Storm Trooper](https://external-preview.redd.it/hu3bzCiotL7kZQ8TAwgZ5pjxScT2kLOOEgyuMEeQa_8.png?width=704&auto=webp&s=5564cd5049f157c2dbd4ba0a3c3260cbd7f4ab6e)
+
 ## HTML, CSS and javJavaScript
 
 ### Quick look at the project
