@@ -13,17 +13,17 @@
 - Embedded JavaScript code generates the background star pattern along with selecting which episode/title/story intro to display.
 
 ----------
-
+element
 
 ### <center> HTML
-- The total HTML line count is 15 lines.
+- The total HTML body line count is done in 15 lines.
     - This only includes the HTML lines in-between the body tags.
     - Does not include anything that could be linked externally.
 
 
 ### <center> JavaScript
 - There are 2 JavaScript functions.
-    1. The first is a pixel generator that calculates the open html view and then randomly places a .5px dot starting a [1, 0]. I got the idea from a few of the other I have it set to create a total of 1200 "dots" that are placed into a div element following the opening body element.
+    1. The first is a pixel generator that randomly places stars at 3 levels moving at 3 differnt speeds to give the feeling of floating through space _(This is unlike any of the Star Wars crawlers, I did this for an added effect)_ . 
     
     2. The other uses a json-collection containing the first 8 Star Wars opening crawls. A random number is generated and then used to select which episode element to add inside the HTML when the page is loaded.
 
