@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-
+<!--/
+	Project: 		Create a HTML motion page using css and javascript
+						to replicate the famous introductory crawler from the
+						Star Wars Franchise.
+	Created by: 	Raymond Anderson.
+	Date Started: 		December 2018.
+	/-->
 <html lang="en">
-
   <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
+	<!--/ Force page to auto-refreshevery 90 seconds. /-->
     <meta http-equiv="refresh" content="90">
-    <title>Star Wars 1977 Intro</title>
+    <title>CSS Controlled Crawler</title>
     <link rel="stylesheet" href="./styles/index.css" type="text/css" />
+    <!--/ Free Star Wars font style provided courtesy of https://fonts2u.com/starwars.font /-->
     <link rel="stylesheet" href="./font/STARWARS/stylesheet.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
-
+  <!--/ Set the stage. /-->
   <body>
+	  <!--/ Assign the audio rules. /-->
     <audio preload="auto" autoplay>
+		<!--/
+
+			Audio provided for free courtesy of https://archive.org/details/StarWarsThemeSongByJohnWilliams
+
+		      ** Some browsers require authorization in settings for autoplay to work correctly **
+
+		/-->
       <source src="./media/Star.Wars.Intro.mp3" type="audio/mp3" />
-    </audio>
+	</audio>
     <div id="intro">
+	  <!--/ Insert the only text displayed directly from the HTML code. /-->
       <p class="intro"> A long time ago in a galaxy far,<br />far away. . . .</p>
-    </div>
+	</div>
+	<!--/ Create the placeholders called by javasccript. /-->
     <div id="scene">
       <div id="crawl">
         <h4 id="episode"></h4>
@@ -28,8 +45,7 @@
         <p id="contentC"></p>
       </div>
     </div>
-
-    <!-- SVG code -->
+    <!--/ SVG code generated from a png file, by an application "Sketch" for OSx. /-->
     <svg width="634px" height="273px" viewbox="0 0 634 273">
       <title>StarWarsLogo</title>
       <desc>Created with Sketch.</desc>
@@ -53,12 +69,11 @@
         </g>
       </g>
     </svg>
-
     <!-- JavaScript Code -->
     <script type="text/javascript">
-      // Set the amount of stars to generate
+      // Set the star total constant number.
       const stars = 150;
-      // Calculate star position by the window size
+      // Create a function to generate our star constant.
       function genStars() {
         var setX = 2000;
         var newX = Math.floor(Math.random() * setX);
@@ -66,33 +81,32 @@
         var newY = Math.floor(Math.random() * setY);
         return [newX, newY];
       }
-      // Place the element inside the HTML
+      // Create a loop that individually places each star.
       for (i = 0; i < stars; i++) {
+        // Assign the variables calling the star placement function as needed.
         var placeStars = genStars();
         var placeStars2 = genStars();
         var placeStars3 = genStars();
-
+        //  Create the instructions for the first type of star to show.
         var theseStars = document.createElement("nav");
         theseStars.style.top = placeStars[0] + "px";
         theseStars.style.left = placeStars[1] + "px";
         theseStars.className = "star";
         document.body.append(theseStars);
-
+        // Create the instructions for the second type of star to show.
         var theseStars2 = document.createElement("nav");
         theseStars2.style.top = placeStars2[0] + "px";
         theseStars2.style.left = placeStars2[1] + "px";
         theseStars2.className = "star2";
         document.body.append(theseStars2);
-
+        // Create the instructions for the third type of star to show.
         var theseStars3 = document.createElement("nav");
         theseStars3.style.top = placeStars3[0] + "px";
         theseStars3.style.left = placeStars3[1] + "px";
         theseStars3.className = "star3";
         document.body.append(theseStars3);
       }
-
-
-      // Create the Star Wars crawl collection
+      // A collection of the various episode introductions.
       var collection = {
         "0": {
           "episode": "EPISODE I",
@@ -151,15 +165,16 @@
           "c": "But the Resistance has been exposed. As the First Order speeds toward the rebel base, the brave heroes mount a desperate escape...."
         }
       };
-      // Randomly select which episode to insert
+      // Set the varibles and assign the episode.
       var x1 = Math.floor(Math.random() * 8);
       var episodeContent = collection[x1]["episode"];
       var titleContent = collection[x1]["title"];
       var paragraphA = collection[x1]["a"];
       var paragraphB = collection[x1]["b"];
       var paragraphC = collection[x1]["c"];
+      // Create an action to controll "when" and "where" the content will be delivered.
       document.getElementById("scene").addEventListener("load", changeStoryBoard());
-      // Where to insert crawl text inside the html
+      // Create the function to controll "which" episode content will be delivered.
       function changeStoryBoard() {
         episode.innerHTML = episodeContent;
         title.innerHTML = titleContent;
@@ -169,5 +184,5 @@
       }
     </script>
   </body>
-
+ <!--/ Thank you George Lucas. /-->
 </html>
