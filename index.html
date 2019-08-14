@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <!--/
-	Project: 		Create a HTML motion page using css and javascript
-						to replicate the famous introductory crawler from the
-						Star Wars Franchise.
-	Created by: 	Raymond Anderson.
-	Date Started: 		December 2018.
-	/-->
+	Project: 				Create a HTML motion page using css and javascript 
+									to replicate the famous introductory crawler from the Star Wars Franchise.
+	Created by: 		Raymond Anderson.
+	Date Started: 	December 2018.
+/-->
 <html lang="en">
-  <head>
-	<meta charset="utf-8">
-	<!--/ Force page to auto-refreshevery 90 seconds. /-->
-    <meta http-equiv="refresh" content="90">
-    <title>CSS Controlled Crawler</title>
-    <link rel="stylesheet" href="./styles/index.css" type="text/css" />
-    <!--/ Free Star Wars font style provided courtesy of https://fonts2u.com/starwars.font /-->
-    <link rel="stylesheet" href="./font/STARWARS/stylesheet.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<head>
+		<meta charset="utf-8">
+		<!--/ Force page to auto-refreshevery 90 seconds. /-->
+		<meta http-equiv="refresh" content="90">
+		<title>CSS Controlled Crawler</title>
+		<link rel="stylesheet" href="./styles/index.css" type="text/css" />
+	  <!--/ Free Star Wars font style provided courtesy of https://fonts2u.com/starwars.font /-->
+	  <link rel="stylesheet" href="./font/STARWARS/stylesheet.css" type="text/css" />
+	  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
   <!--/ Set the stage. /-->
   <body>
 	  <!--/ Assign the audio rules. /-->
-    <audio preload="auto" autoplay>
-		<!--/
+	  <audio preload="auto" autoplay>
+		  <!--/
 
 			Audio provided for free courtesy of https://archive.org/details/StarWarsThemeSongByJohnWilliams
 
-		      ** Some browsers require authorization in settings for autoplay to work correctly **
+			** Some browsers require authorization in settings for autoplay to work correctly **
 
 		/-->
-      <source src="./media/Star.Wars.Intro.mp3" type="audio/mp3" />
-	</audio>
-    <div id="intro">
-	  <!--/ Insert the only text displayed directly from the HTML code. /-->
-      <p class="intro"> A long time ago in a galaxy far,<br />far away. . . .</p>
-	</div>
-	<!--/ Create the placeholders called by javasccript. /-->
+			<source src="./media/Star.Wars.Intro.mp3" type="audio/mp3" />
+		</audio>
+		<div id="intro">
+			<!--/ Insert the only text displayed directly from the HTML code. /-->
+			<p class="intro"> A long time ago in a galaxy far,<br />far away. . . .</p>
+		</div>
+		<!--/ Create the placeholders called by javasccript. /-->
     <div id="scene">
       <div id="crawl">
         <h4 id="episode"></h4>
